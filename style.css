@@ -1,0 +1,141 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #5b0a0a, #a50328, #d72638);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+}
+
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(189, 25, 25, 0.12);
+  padding: 40px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 18px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  color: #c21818;
+  animation: fadeIn 0.6s ease;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: black; 
+}
+
+p {
+  color: black;
+}
+
+
+.inputBox {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.18);
+  color: rgb(105, 16, 16);
+}
+
+
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #e63946, #ad1727, #780000);
+  color: rgb(65, 17, 17);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(120deg, #c1121f, #780000);
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.15);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  border-left: 4px solid #ffccd5;
+  animation: slideUp 0.35s ease;
+}
+
+li span {
+  flex: 1;
+  margin-left: 8px;
+}
+
+.editBtn,
+.deleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  transition: 0.25s;
+}
+
+.editBtn:hover {
+  color: #bfe6ff; 
+}
+
+.deleteBtn:hover {
+  color: #ffd6d6; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
